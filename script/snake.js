@@ -55,3 +55,7 @@ function addSegments() {
 export function snakeIntersection () {
   return onSnake(snakeBody[0], { ignoreHead: true})
 }
+
+export function updatePoint() {
+  return snakeBody.length - 1
+}

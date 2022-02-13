@@ -6,15 +6,21 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Snake Game</title>
   <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+  <!-- sweet alert -->
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="script/game.js" type="module" defer></script>
 </head>
 <body>
   <div id="game-board"></div>
+  <div id="point">Score : <span id="point-value"></span></div>
   <div id="keyboard">
       <button class="key" id="up">up</button>
+      <div class="mid">
+        <button class="key" id="left">left</button>
+        <button class="key" id="mid">^_^</button>
+        <button class="key" id="right">right</button>
+      </div>
       <button class="key" id="down">down</button>
-      <button class="key" id="left">left</button>
-      <button class="key" id="right">right</button>
   </div>
 </body>
 </html>
