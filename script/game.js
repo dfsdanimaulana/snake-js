@@ -11,23 +11,14 @@ const gamePoint = document.getElementById('point-value')
 
 function main(currentTime) {
   if(gameOver){
-      Swal.fire({
-        title: 'Game Over!',
-        text: "do you want to start again?",
-        icon: 'error',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes',
-        cancelButtonText: 'No'
-      }).then((result) => {
-        if (result.isConfirmed) {
-          console.log('here')
-          window.location = "/snake-js"
-          
-        }
+      Swal.fire(
+        'Game Over!',
+        "don't give up and try again 😊",
+        'error'
+      ).then(()=>{
+        window.location = '/snake-js'
       })
-    return
+      return
   }
   const secondSinceLastRender = (currentTime - lastRenderTime)/1000
   window.requestAnimationFrame(main)
